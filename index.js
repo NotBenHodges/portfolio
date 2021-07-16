@@ -1,4 +1,4 @@
-import Player from player.js;
+import Player from '/player.js';
 
 let canvas = document.getElementById("screen");
 let ctx = canvas.getContext('2d');
@@ -13,3 +13,5 @@ let p = new Player(GAMEWIDTH,GAMEHEIGHT);
 function gameLoop() {
   p.draw(ctx);
 }
+
+gameLoop();
