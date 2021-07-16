@@ -1,9 +1,13 @@
 let canvas = document.getElementById("screen");
 let ctx = canvas.getContext('2d');
 
-ctx.fillStyle = '#f00';
-ctx.beginPath();
-ctx.moveTo(75, 50);
-ctx.lineTo(100, 75);
-ctx.lineTo(100, 25);
-ctx.fill();
+const GAMEWIDTH = 50;
+const GAMEHEIGHT = 50;
+
+ctx.clearRect(0,0,canvas.width,canvas.height);
+
+let p = new Player(GAMEWIDTH,GAMEHEIGHT);
+
+function gameLoop() {
+  p.draw(ctx);
+}
