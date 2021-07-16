@@ -8,8 +8,6 @@ const GAMEHEIGHT = 50;
 
 ctx.clearRect(0,0,canvas.width,canvas.height);
 
-let p = new Player(GAMEWIDTH,GAMEHEIGHT);
-
 class Player {
   constructor(gameWidth,gameHeight) {
     this.gameWidth = gameWidth;
@@ -20,11 +18,13 @@ class Player {
       y: gameHeight
     };
   }
-
+  
   draw(ctx) {
     ctx.fillRect(20,20,gameWidth,gameHeight);
   }
 }
+
+let p = new Player(GAMEWIDTH,GAMEHEIGHT);
 
 function gameLoop() {
   p.draw(ctx);
